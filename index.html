@@ -1,64 +1,127 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Lutan Tech — Animated Ad</title>
-  <style>
-    :root{--bg:#0f1724;--card:#0b1220;--accent:#ffd400;--muted:#9aa4b2}
-    *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#e6eef8;background:radial-gradient(circle at top,#031025,#071426);display:flex;align-items:center;justify-content:center;min-height:10vh;overflow:hidden}
-    .card{position:relative;width:90%;max-width:900px;background:rgba(255,255,255,0.03);border-radius:20px;padding:30px;display:grid;grid-template-columns:260px 1fr;gap:24px;align-items:center;box-shadow:0 10px 40px rgba(0,0,0,0.5);animation:float 5s ease-in-out infinite alternate}
-    .logo-wrap{text-align:center;position:relative;animation:spinLogo 8s linear infinite}
-    .logo{width:200px;height:200px;object-fit:contain;background:#fff;border-radius:14px;padding:10px;animation:pop 2s ease-out 1}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lutan Tech 100x200 Ad</title>
+    <style>
+        /* Define a custom font */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 
-    .content h1{margin:0 0 10px;font-size:28px;color:#fff;animation:fadeIn 2s ease forwards}
-    .tag{display:inline-block;background:rgba(255,212,0,0.15);color:var(--accent);padding:6px 10px;border-radius:8px;font-weight:700;margin-bottom:10px;animation:slideIn 1.2s ease-out}
-    .desc{color:var(--muted);margin:8px 0 16px;line-height:1.5;opacity:0;animation:fadeIn 2.5s ease 0.5s forwards}
-    .bullets{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:20px}
-    .b{background:rgba(255,255,255,0.05);padding:8px 12px;border-radius:10px;font-weight:600;color:#dbe9ff;transform:translateY(10px);opacity:0;animation:popUp 1s forwards}
-    .b:nth-child(1){animation-delay:0.4s}.b:nth-child(2){animation-delay:0.6s}.b:nth-child(3){animation-delay:0.8s}.b:nth-child(4){animation-delay:1s}
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: fit-content;
+            margin: 0;
+            background-color: #eef2f5;
+        }
 
-    .cta-row{display:flex;gap:12px;align-items:center;animation:fadeIn 2.6s ease 1s forwards;opacity:0}
-    .btn{background:var(--accent);color:#071426;padding:12px 18px;border-radius:12px;font-weight:800;text-decoration:none;transition:all .3s ease}
-    .btn:hover{transform:scale(1.05);box-shadow:0 0 10px var(--accent)}
-    .ghost{border:1px solid rgba(255,255,255,0.08);color:#d8e7ff;padding:10px 14px;border-radius:10px;text-decoration:none;transition:all .3s ease}
-    .ghost:hover{background:rgba(255,255,255,0.05)}
+        /* The main container is constrained to 100px wide by 200px high */
+        .lutan-ad-banner {
+            width: 90%;
+            max-width: 500px;
+            height: 100px;
+            flex-wrap: wrap;
+            display: flex;
+            flex-direction: row; 
+            align-items: center;
+            padding: 10px;
+            background: linear-gradient(145deg,#0f0f, #ffffff, #d4ff005b);
+            border: 1px solid #007bff; /* Primary brand color */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: 'Inter', sans-serif;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            overflow: hidden; /* Ensure nothing spills out */
+            
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
 
-    .small{font-size:13px;color:var(--muted);margin-top:10px;animation:fadeIn 3s ease 1.2s forwards;opacity:0}
+        .lutan-ad-banner:hover {
+            transform: scale(1.03);
+            box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+        }
 
-    /* Animations */
-    @keyframes spinLogo{from{transform:rotateY(0)}to{transform:rotateY(360deg)}}
-    @keyframes pop{0%{transform:scale(0)}80%{transform:scale(1.1)}100%{transform:scale(1)}}
-    @keyframes fadeIn{to{opacity:1}}
-    @keyframes slideIn{from{transform:translateX(-40px);opacity:0}to{transform:none;opacity:1}}
-    @keyframes popUp{to{transform:none;opacity:1}}
-    @keyframes float{0%{transform:translateY(0)}100%{transform:translateY(-8px)}}
+        .lutan-ad-logo {
+            padding: 5px 0 0px 0;
+        }
 
-    @media(max-width:760px){.card{grid-template-columns:1fr;gap:16px;padding:20px;text-align:center}.logo{width:150px;height:150px}}
-  </style>
+        .lutan-ad-logo img {
+            width: 35px; /* Smaller logo for the small space */
+            height: 35px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #007bff;
+        }
+
+        .lutan-ad-content {
+            padding: 5px;
+            flex-grow: 1; 
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+        }
+
+        .lutan-ad-headline {
+            font-size: 10px; /* Small font size is mandatory here */
+            font-weight: 900;
+            color: #343a40;
+            line-height: 1.1;
+            margin-bottom: 3px;
+            text-transform: uppercase;
+        }
+
+        .lutan-ad-text {
+            font-size: 8px; /* Extremely small for readability */
+            color: #495057;
+            line-height: 1.2;
+            word-wrap: break-word; /* Ensure words wrap correctly */
+            padding: 0 2px;
+        }
+
+        .lutan-ad-cta {
+            width: 100%;
+            padding: 5px 0;
+            background-color: #28a745; /* Green CTA */
+            color: white;
+            font-size: 10px;
+            font-weight: bold;
+            border-top: 1px solid #218838;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .lutan-ad-cta:hover {
+            background-color: #1e7e34;
+        }
+    </style>
 </head>
 <body>
-  <article class="card">
-    <div class="logo-wrap">
-      <img class="logo" src="https://i.ibb.co/FbGTqdMC/me-4.jpg" alt="Lutan Tech Logo">
-    </div>
-    <div class="content">
-      <div class="tag">Custom Web Solutions</div>
-      <h1>Welcome to <span style="color:var(--accent)">Lutan Tech</span></h1>
-      <div class="desc">We build high-performance, secure, and innovative platforms to help your business thrive online. From portfolios to smart apps and web services, we've got you covered.</div>
-      <div class="bullets">
-        <div class="b">Fast & Optimized</div>
-        <div class="b">Secure by Design</div>
-        <div class="b">Flask & JS Expertise</div>
-        <div class="b">Growth Focused</div>
-      </div>
-      <div class="cta-row">
-        <a class="btn" href="https://lutan-tech.is-great.org" target="_blank">Visit Lutan Tech</a>
-        <a class="ghost" href="mailto:lutancorpinfoteam@gmail.com">Contact Us</a>
-      </div>
-      <div class="small">Ready to go digital? Lutan Tech’s got your back — fast, secure, and custom-built for success.</div>
-    </div>
-  </article>
+
+    <!-- AD START - The entire banner is a clickable link -->
+    <a href="https://lutan-tech.is-great.org/" target="_blank" class="lutan-ad-banner" title="Visit Lutan Tech">
+        
+        <div class="lutan-ad-logo">
+            <img src="https://i.ibb.co/FbGTqdMC/me-4.jpg" alt="Lutan Tech Logo" onerror="this.style.display='none'">
+        </div>
+
+        <div class="lutan-ad-content">
+            <div class="lutan-ad-headline">
+                Lutan Tech: Innovate & Grow
+            </div>
+            <div class="lutan-ad-text">
+                Secure, High-Performance Portfolios, Smart Apps, & Web Services.
+            </div>
+        </div>
+        
+        <div class="lutan-ad-cta">
+            Visit Site
+        </div>
+        
+    </a>
+    <!-- AD END -->
+
 </body>
 </html>
