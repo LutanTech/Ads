@@ -54,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     color:green
   `;
   inlineBanner.innerHTML = `
-    <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;">
+    <div style="display:flex;align-items:center;justify-content:space-around;gap:10px;">
     <div style="position:fixed; right:10px; background:#333; color:#0f0; top:5px; padding:2px;">Ad</div>
       <img src="https://i.ibb.co/FbGTqdMC/me-4.jpg" style="width:50px;height:50px;border-radius:50%;border:2px solid #007bff;">
       <div style="text-align:left;">
