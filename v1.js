@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     <div style="position:fixed; right:10px; background:#333; color:#0f0; top:5px; padding:2px;">Ad</div>
       <img src="https://i.ibb.co/FbGTqdMC/me-4.jpg" style="width:50px;height:50px;border-radius:50%;border:2px solid #007bff;">
       <div style="text-align:left;">
-        <strong style="font-size:13px;">🚀 Lutan Tech Builds Modern Web Experiences</strong>
+        <strong style="font-size:13px;">🌐Need a website like this ad more? <br> Lutan Tech Builds Modern Web Experiences</strong>
         <p style="font-size:11px;color:#333;margin:3px 0;">Dynamic apps, smart backends, aesthetic designs — all in one dev.</p>
         <a href="https://lutan-tech.is-great.org/" target="_blank" 
            style="display:inline-block;background:#007bff;color:#fff;padding:5px 8px;border-radius:4px;font-size:10px;text-decoration:none;">
