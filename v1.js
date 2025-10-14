@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div style="padding:0 10px 10px 10px;text-align:center;">
         <strong style="font-size:13px;">Lutan Tech: Innovate & Grow</strong>
         <p style="font-size:11px;color:#555;">Secure, high-performance portfolios, smart apps & web services.</p>
-        <a href="https://lutan-tech.is-great.org/?utm_source="${window.location.origin}_top_ad" target="_blank" 
+        <a href="https://lutan-tech.is-great.org/?utm_source=${window.location.origin}_top_ad" target="_blank" 
            style="display:inline-block;background:#28a745;color:#fff;padding:6px 10px;border-radius:4px;font-size:11px;text-decoration:none;">
            Visit Site
         </a>
@@ -60,14 +60,14 @@ document.addEventListener("DOMContentLoaded", () => {
       <div style="text-align:left;">
         <strong style="font-size:13px;">🌐Need a website like this or any other type? <br> Lutan Tech Builds Modern Web Experiences</strong>
         <p style="font-size:11px;color:#333;margin:3px 0;">Dynamic apps, smart backends, aesthetic designs — all in one dev.</p>
-        <a href="https://lutan-tech.is-great.org/?utm_source="${window.location.origin}_ad" target="_blank" 
+        <a href="https://lutan-tech.is-great.org/?utm_source=${window.location.origin}_ad" target="_blank" 
            style="display:inline-block;background:#007bff;color:#fff;padding:5px 8px;border-radius:4px;font-size:10px;text-decoration:none;">
            Visit Now
         </a>
       </div>
     </div>
   `;
-    inlineBanner.addEventListener('click', ()=>{window.open(`https://lutan-tech.is-great.org/?utm_source="${window.location.origin}_ad`)})
+    inlineBanner.addEventListener('click', ()=>{window.open(`https://lutan-tech.is-great.org/?utm_source=${window.location.origin}_ad`)})
   const adScript = document.getElementById("adscript");
   if (adScript && adScript.parentNode) {
     adScript.parentNode.insertBefore(inlineBanner, adScript);
