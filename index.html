@@ -129,6 +129,31 @@
       <div class="lutan-ad-cta">Visit Site</div>
     </a>
   </div>
-
+  <script>
+    setInterval(() => {
+      const iframe = document.querySelector('iframe');
+      if (!iframe) return; // no iframe found yet
+    
+      const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+      if (!innerDoc) return;
+    
+      const span = Array.from(innerDoc.querySelectorAll('span'))
+        .find(el => el.textContent.trim() === '×');
+    
+    const div = Array.from(innerDoc.querySelectorAll('span'))
+        .find(el => el.textContent.trim() === 'Close');
+    
+        if (span) {
+        span.click();
+        console.log('Clicked the × inside iframe!');
+      }
+      if (span) {
+        span.click();
+        console.log('Clicked the × inside iframe!');
+      }
+    }, 5000);
+    
+          
+          </script>
 </body>
 </html>
