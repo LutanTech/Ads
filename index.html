@@ -130,9 +130,13 @@
     </a>
   </div>
   <script>
+    const formatedDate = new Date().getMinutes()
+    localStorage.setItem('lastClick', formatedDate)
+    
     setInterval(() => {
+        const formatedDate = new Date().getMinutes()
       const iframe = document.querySelector('iframe');
-      if (!iframe) return; // no iframe found yet
+      if (!iframe) return;
     
       const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
       if (!innerDoc) return;
@@ -140,18 +144,38 @@
       const span = Array.from(innerDoc.querySelectorAll('span'))
         .find(el => el.textContent.trim() === '×');
     
-    const div = Array.from(innerDoc.querySelectorAll('span'))
+        const div = Array.from(innerDoc.querySelectorAll('span'))
         .find(el => el.textContent.trim() === 'Close');
     
         if (span) {
         span.click();
         console.log('Clicked the × inside iframe!');
+        localStorage.setItem('lastClick', formatedDate)
       }
-      if (span) {
-        span.click();
-        console.log('Clicked the × inside iframe!');
+      if (div) {
+        div.click();
+        console.log('Clicked the Close inside iframe!');
+        localStorage.setItem('lastClick', formatedDate)
+    
       }
     }, 5000);
+     
+    
+    setInterval(() => {
+        checkLast()
+    }, 3000);
+    
+    function checkLast(){
+        const now = new Date().getMinutes()
+        const last =localStorage.getItem('lastClick')
+        const diff = parseInt(now) - parseInt(last)
+        if(diff > 0){
+            window.location.reload()
+            localStorage.clear()
+            sessionStorage.clear()
+        }
+    
+    }
     
           
           </script>
