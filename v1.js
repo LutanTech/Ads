@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
       font-family: 'Inter', sans-serif;
       overflow: hidden;
-      z-index: 9999;
+      z-index: 999000000000009;
       animation: fadeSlide 0.8s ease forwards;
     ">
       <div style="display:flex;justify-content:space-between;align-items:center;padding:5px 10px;">
