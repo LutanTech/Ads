@@ -34,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
   `;
   setTimeout(() => {
       document.body.appendChild(topBanner);
-
   }, 60000);
 
   // === INLINE MID-PAGE AD ===
@@ -70,7 +69,9 @@ document.addEventListener("DOMContentLoaded", () => {
     inlineBanner.addEventListener('click', ()=>{window.open(`https://lutan-tech.is-great.org/?utm_source=${window.location.origin}&utm_medium=inline_ad`)})
   const adScript = document.getElementById("adscript");
   if (adScript && adScript.parentNode) {
-    adScript.parentNode.insertBefore(inlineBanner, adScript);
+    setTimeout(() => {
+      adScript.parentNode.insertBefore(inlineBanner, adScript);
+    }, 3000); 
   }
 
   const style = document.createElement("style");
