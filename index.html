@@ -137,6 +137,39 @@
       <div class="lutan-ad-cta">Visit Site =></div>
     </a>
   </div>
+<script>w
+  window.addEventListener('message', (event) => {
+  if (event.origin !== 'http://127.0.0.1:5506') return; 
+  if (event.data.action === 'closeAd') {
+    setInterval(() => {
+    const formatedDate = new Date().getMinutes()
+  const iframe = document.querySelector('iframe');
+  if (!iframe) return;
 
+  const innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+  if (!innerDoc) return;
+
+  const span = Array.from(innerDoc.querySelectorAll('span'))
+    .find(el => el.textContent.trim() === '×');
+
+    const div = Array.from(innerDoc.querySelectorAll('span'))
+    .find(el => el.textContent.trim() === 'Close');
+
+    if (span) {
+    span.click();
+    console.log('Clicked the × inside iframe!');
+    localStorage.setItem('lastClick', formatedDate)
+  }
+  if (div) {
+    div.click();
+    console.log('Clicked the Close inside iframe!');
+    localStorage.setItem('lastClick', formatedDate)
+
+  }
+}, 5000);
+  }
+});
+
+</script>
 </body>
 </html>

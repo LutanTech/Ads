@@ -50,7 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
     font-family: 'Inter', sans-serif;
     text-align: center;
     animation: fadeSlide 0.8s ease forwards;
-    color:green
+    color:green;
+    position:relative;
   `;
   inlineBanner.innerHTML = `
     <div style="display:flex;align-items:center;justify-content:space-start;gap:10px;">
