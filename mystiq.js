@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
       inlineBanner.innerHTML = `
         <div style="display:flex;align-items:center;justify-content:space-start;gap:10px;">
         <div style="position:fixed; right:10px; background:#333; color:#fff; top:5px; padding:2px;">Ad</div>
-          <img src="https://i.ibb.co/204vVgsT/mystic-ls-s.png" style="width:50px;height:50px;border-radius:50%;border:2px solid rgb(0, 255, 30);">
+          <img src="https://i.ibb.co/204vVgsT/mystic-ls-s.png" style="width:200px;height:200px;border-radius:50%;border:2px solid rgb(0, 255, 30);">
           <div style="text-align:left;">
             <strong style="font-size:13px; color:#fff000">Just Confess!!!. It's Mystiq Baby  </strong>
             <hr>
