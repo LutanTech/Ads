@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
       margin: 20px auto;
       width: 90%;
       padding: 12px;
-      background: linear-gradient(135deg, #001f3f, #004d4d);
+      background:repeating-radial-gradient(#232020, #000000 100px);
       border: 1px solid #00ffff;
       box-shadow: 0 2px 8px rgba(0,255,255,0.25);
       font-family: 'Inter', sans-serif;
