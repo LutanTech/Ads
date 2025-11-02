@@ -27,14 +27,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
             
             <p style="list-style:none; font-weight:bolder; color:black; font-size:small;">
                 Confess without revealing your identity. No cap, just vibes.</p>
-            <a href="https://mystiq.xo.je" target="_blank" 
+            <a href="https://mystiq.xo.je/register" target="_blank" 
                style="display:inline-block;background:#007bff;color:#fff;padding:5px 8px;border-radius:4px;font-size:10px;text-decoration:none; margin-top:20px;">
                Visit Now
             </a>
           </div>
         </div>
       `;
-        inlineBanner.addEventListener('click', ()=>{window.open(`https://mystiq.xo.je`)})
+        inlineBanner.addEventListener('click', ()=>{window.open(`https://mystiq.xo.je/register`)})
       const myscript = document.getElementById("myscript");
       if (myscript && myscript.parentNode) {
         setTimeout(() => {
