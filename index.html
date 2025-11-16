@@ -137,9 +137,8 @@
       <div class="lutan-ad-cta">Visit Site =></div>
     </a>
   </div>
-<script>w
+<script>
   window.addEventListener('message', (event) => {
-  if (event.origin !== 'http://127.0.0.1:5506') return; 
   if (event.data.action === 'closeAd') {
     setInterval(() => {
     const formatedDate = new Date().getMinutes()
